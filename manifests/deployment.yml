@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: carmelacrbuildhelloworldnode 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: carmelacrbuildhelloworldnode 
+    spec:
+      containers:
+        - name: carmelacrbuildhelloworldnode 
+          image: scdevopscontainerregistry.azurecr.io/carmelacrbuildhelloworldnode
+          ports:
+          - containerPort: 80
